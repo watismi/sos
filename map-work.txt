@@ -236,3 +236,131 @@
 		H429.1z M434.8,705.1l-1.9,6h3.8L434.8,705.1z"/>
 </g>
 </svg>
+
+
+<style>
+
+.region path{
+		
+	fill: #d6d6d6;
+	transition: 0.3s ease;
+	
+}
+.region.hover path{
+		
+	fill: #FA6A69;
+	
+}
+
+.region path.text{
+
+	fill: #4f4f4f;
+
+}
+
+</style>
+
+<script>
+
+$('#prev').click(function(){
+
+		$("#s-a-prev").trigger('tap');
+
+});
+
+$('#next').click(function(){
+
+		$("#s-a-next").trigger('tap');
+
+});
+
+</script>
+
+
+
+
+
+<script>
+
+$(function(){
+
+	$('.region').hover(function(){
+		
+    var regName = $(this).data('name'),
+    		actReg = $('.map__address-content[data-reg=' + regName + ']');
+    
+    
+		$('.region').removeClass('hover');
+		$(this).addClass('hover');
+    $('.map__address-content.active').removeClass('active');
+    actReg.addClass('active');
+
+	});
+  
+  $('#map-next').click(function(){
+  if ($('.map__address-content.active').next().length > 0){
+  var nextE = $('.map__address-content.active').next(),
+  		thisE = $('.map__address-content.active'),
+      regA = $('.region.hover'),
+      regName = nextE.data('reg'),
+      regN = $('.region[data-name=' + regName + ']');
+  
+  thisE.removeClass('active');
+  regA.removeClass('hover');
+  nextE.addClass('active');
+  regN.addClass('hover');
+  
+  }
+  
+  else{
+  var nextE = $('.map__address-content').first(),
+  		thisE = $('.map__address-content.active'),
+      regA = $('.region.hover'),
+      regName = nextE.data('reg'),
+      regN = $('.region[data-name=' + regName + ']');
+  
+  thisE.removeClass('active');
+  regA.removeClass('hover');
+  nextE.addClass('active');
+  regN.addClass('hover');
+  
+  }
+  
+  
+  });
+
+$('#map-prev').click(function(){
+  if ($('.map__address-content.active').prev().length > 0){
+  var nextE = $('.map__address-content.active').prev(),
+  		thisE = $('.map__address-content.active'),
+      regA = $('.region.hover'),
+      regName = nextE.data('reg'),
+      regN = $('.region[data-name=' + regName + ']');
+  
+  thisE.removeClass('active');
+  regA.removeClass('hover');
+  nextE.addClass('active');
+  regN.addClass('hover');
+  
+  }
+  
+  else{
+  var nextE = $('.map__address-content').last(),
+  		thisE = $('.map__address-content.active'),
+      regA = $('.region.hover'),
+      regName = nextE.data('reg'),
+      regN = $('.region[data-name=' + regName + ']');
+  
+  thisE.removeClass('active');
+  regA.removeClass('hover');
+  nextE.addClass('active');
+  regN.addClass('hover');
+  
+  }
+  
+  
+  });
+  
+});
+
+</script>
