@@ -262,26 +262,6 @@
 
 <script>
 
-$('#prev').click(function(){
-
-		$("#s-a-prev").trigger('tap');
-
-});
-
-$('#next').click(function(){
-
-		$("#s-a-next").trigger('tap');
-
-});
-
-</script>
-
-
-
-
-
-<script>
-
 $(function(){
 
 	$('.region').hover(function(){
