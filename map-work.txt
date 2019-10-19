@@ -174,7 +174,7 @@
 	</g>
 	
 </g>
-<g id="usa" class="region" data-name="tex">
+<g id="usa" class="region" data-name="us">
 	<path class="st0" d="M43,79l5.5,10.2l3.5-0.8v-3.5L43,79z"/>
 	<path class="st0" d="M57.7,0l-6.2,5.6l1.9,4.1l3.3-2.3l1.9,2.1l6.1-2.3l-0.2-3.5L57.7,0z"/>
 	<path class="st0" d="M12.1,168.9l-0.3,4.8l3.4-0.8v-2.1L12.1,168.9z"/>
